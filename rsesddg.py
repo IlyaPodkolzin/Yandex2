@@ -15,6 +15,7 @@ class Programme(QWidget):
         self.can_draw = False
 
     def draw(self):
+        self.can_draw = True
         self.repaint()
 
     def paintEvent(self, event):
@@ -22,8 +23,8 @@ class Programme(QWidget):
             qp = QPainter()
             qp.begin(self)
             qp.setBrush(QColor(255, 255, 0))
-            size = randint(10, 106)
-            qp.drawEllipse(195 - size, 115 - size, size, size)
+            size = randint(10, 210)
+            qp.drawEllipse(90, 10, size, size)
             qp.end()
 
 
